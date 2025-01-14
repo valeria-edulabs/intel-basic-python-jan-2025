@@ -48,7 +48,7 @@
 # if is_lower == "u":
 #     print("will be upper case")
 #     name_to_be_printed = name.upper()
-# # if is_lower != "l" or is_lower != "u":
+# # if is_lower != "l" and is_lower != "u":
 # if is_lower not in "lu":
 #     print("i don't know - printing capitalized")
 #     name_to_be_printed = name.capitalize()
