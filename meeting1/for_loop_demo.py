@@ -47,7 +47,7 @@
 # m = l[1]
 
 # h, m = ["05", "34"]
-h, m = "05:34".split(":")
+# h, m = "05:34".split(":")
 # h, m = "05:34:38".split(":")
 
 # print(h, m)
@@ -58,17 +58,17 @@ h, m = "05:34".split(":")
 # for elem in l:
 #     print(f"elem: {elem}")
 
-matrix = [
-    [1,2,3],
-    [11,22,33],
-    [111,222,333],
-]
+# matrix = [
+#     [1,2,3],
+#     [11,22,33],
+#     [111,222,333],
+# ]
 
-for row in matrix:
-    print(row)
-
-for c1, c2, c3 in matrix:
-    print(c2)
+# for row in matrix:
+#     print(row)
+#
+# for c1, c2, c3 in matrix:
+#     print(c2)
 
 
 # l = [1,2,3]
@@ -77,3 +77,9 @@ for c1, c2, c3 in matrix:
 # num = 6
 
 # i, num = (0, 67)
+
+cities = ["Jerusalem", "New York", "Paris"]
+countries = ["Israel", "US", "France"]
+temperature = [14, -3]
+for city, country, temper in zip(cities, countries, temperature):
+    print(city, country, temper)
