@@ -54,3 +54,5 @@ for p in persons:
     persons_dict[p["id"]] = p
 
 pprint.pprint(persons_dict)
+
+print("France" in countries)
