@@ -26,25 +26,3 @@ colors = ["red", "white", "red", "blue", "black", "red"]
 # The keys are car model names.
 # The values are lists of unique colors for each model, sorted alphabetically.
 
-def group_car_colors(models, colors):
-    # Initialize an empty dictionary to store the grouped colors by model
-    car_colors = {}
-
-    # Loop through the models and colors simultaneously
-    for model, color in zip(models, colors):
-        # If the model is not yet in the dictionary, add it with an empty list
-        if model not in car_colors:
-            car_colors[model] = []
-
-        # Add the color to the list of the model (only if it's not already in the list)
-        if color not in car_colors[model]:
-            car_colors[model].append(color)
-
-    # Sort the colors alphabetically for each model
-    for model in car_colors:
-        car_colors[model].sort()
-
-    return car_colors
-
-result = group_car_colors(models, colors)
-print(result)
