@@ -1,4 +1,5 @@
 import datetime
+import pprint
 
 my_dict = {
     1: "January",
@@ -44,3 +45,12 @@ for p in persons:
     print(p["first_name"])
     p["age"] = 2025 - p["byear"]
 
+print(persons[1]["age"])
+for p in persons:
+    print(p["age"])
+
+persons_dict = {}
+for p in persons:
+    persons_dict[p["id"]] = p
+
+pprint.pprint(persons_dict)
