@@ -30,13 +30,27 @@ import requests
 #     print(joke['value'])
 
 
-response = requests.get("https://api.chucknorris.io/jokes/categories")
-categories = response.json()
-print(categories)
-c = categories[0]
-# https://api.chucknorris.io/jokes/random?category={category}
-response = requests.get(
-    "https://api.chucknorris.io/jokes/random",
-    {"category": c}
-)
-print(response.url)
+# response = requests.get("https://api.chucknorris.io/jokes/categories")
+# categories = response.json()
+# print(categories)
+# c = categories[0]
+# # https://api.chucknorris.io/jokes/random?category={category}
+# response = requests.get(
+#     "https://api.chucknorris.io/jokes/random",
+#     {"category": c}
+# )
+# print(response.url)
+#
+# "https://finnhub.io/api/v1/search?q=apple&exchange=US&token=cp310g9r01qvi2qqa9ogcp310g9r01qvi2qqa9p0"
+
+api_key = "cp310g9r01qvi2qqa9ogcp310g9r01qvi2qqa9p0"
+
+ticker = input("Insert ticker")
+url = "https://finnhub.io/api/v1/search"
+params = {
+    "q": ticker,
+    "exchange": "US",
+    "token": api_key
+}
+response = requests.get(url, params)
+pprint.pprint(response.json())
