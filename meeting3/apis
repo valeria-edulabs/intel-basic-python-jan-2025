@@ -1,0 +1,15 @@
+Method - GET / POST / PUT / DELETE
+
+https://google.com/weather?city=Netanya&country=Israel
+https://google.com/finance
+
+
+http://
+ftp://
+udp://
+
+
+https://api.chucknorris.io/jokes/random
+https://api.chucknorris.io/jokes/categories
+https://api.chucknorris.io/jokes/random?category={category}
+https://api.chucknorris.io/jokes/search?query={query}
