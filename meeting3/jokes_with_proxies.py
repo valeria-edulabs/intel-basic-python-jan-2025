@@ -7,3 +7,4 @@ proxies = {
 
 url = "https://api.chucknorris.io/jokes/random"
 requests.get(url, proxies=proxies)
+

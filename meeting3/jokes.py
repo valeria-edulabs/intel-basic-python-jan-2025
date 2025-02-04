@@ -18,13 +18,25 @@ import requests
 # print(response.status_code)
 
 
-params = {
-    "query": "eat"
-}
-response = requests.get("https://api.chucknorris.io/jokes/search", params)
-print(response.status_code)
-pprint.pprint(response.json())
-data = response.json()
-print('total jokes', len(data['result']))
-for joke in data['result']:
-    print(joke['value'])
+# params = {
+#     "query": "eat"
+# }
+# response = requests.get("https://api.chucknorris.io/jokes/search", params)
+# print(response.status_code)
+# pprint.pprint(response.json())
+# data = response.json()
+# print('total jokes', len(data['result']))
+# for joke in data['result']:
+#     print(joke['value'])
+
+
+response = requests.get("https://api.chucknorris.io/jokes/categories")
+categories = response.json()
+print(categories)
+c = categories[0]
+# https://api.chucknorris.io/jokes/random?category={category}
+response = requests.get(
+    "https://api.chucknorris.io/jokes/random",
+    {"category": c}
+)
+print(response.url)
