@@ -25,6 +25,6 @@ response = requests.get("https://api.chucknorris.io/jokes/search", params)
 print(response.status_code)
 pprint.pprint(response.json())
 data = response.json()
-print('total jokes',len(data))
+print('total jokes', len(data['result']))
 for joke in data['result']:
     print(joke['value'])
